@@ -4,7 +4,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class Main {
 
@@ -61,14 +60,6 @@ public class Main {
 			//Ejecutamos l
 			instruccion.executeUpdate();
 			
-			instruccion = conexion.prepareStatement("INSERT INTO gestor(usuario,password, correo) VALUES (?,?,?)");
-			instruccion.setString(1, "gestorPrueba1");
-			instruccion.setString(2, "gestorPrueba1");
-			instruccion.setString(3, "gestorPrueba1@correo.com");
-			
-			//Ejecutamos l
-			instruccion.executeUpdate();
-			
 			conexion.commit();
 
 //				
@@ -99,17 +90,20 @@ public class Main {
 			}catch (SQLException ex) {
 				ex.printStackTrace();
 			}
-
-			if(conexion != null) {
-				conexion.close();
+			if(resultados != null) {
+				resultados.close();
 			}
 			
 			if(instruccion != null) {
 				instruccion.close();
 			}
-			if(resultados != null) {
-				resultados.close();
+			
+			if(conexion != null) {
+				conexion.close();
 			}
+			
+			
+			
 			
 			
 			
