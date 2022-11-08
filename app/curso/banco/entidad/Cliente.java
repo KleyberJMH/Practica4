@@ -73,5 +73,14 @@ public class Cliente {
 		this.saldo = saldo;
 	}
 	
+	public void showInfo() {
+		System.out.println("Cliente id " + this.getId());
+		System.out.println("Id Gestor: " + this.getId_gestor());
+		System.out.println("Usuario: " + this.getUsuario());
+		System.out.println("Contraseña: " + this.getPassword());
+		System.out.println("Correo: " + this.getCorreo());
+		System.out.println("Saldo: " + this.getSaldo());
+	}
+	
 	
 }

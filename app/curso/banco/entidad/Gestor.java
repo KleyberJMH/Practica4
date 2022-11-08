@@ -51,4 +51,12 @@ public class Gestor {
 		public void setCorreo(String correo) {
 			this.correo = correo;
 		}
+		
+		public void showInfo() {
+			System.out.println("Gestor id " + this.getId());
+			System.out.println("Usuario: " + this.getUsuario());
+			System.out.println("Contraseña: " + this.getPassword());
+			System.out.println("Correo: " + this.getCorreo());
+			System.out.println("--------------------------------------");
+		}
 }
