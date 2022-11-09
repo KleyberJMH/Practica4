@@ -104,8 +104,8 @@ public class DatabaseTransferencia {
 			if (resultados.next()) {
 				transferencia = new Transferencia();
 				transferencia.setId(resultados.getInt("id"));
-				transferencia.setId_ordenante(resultados.getInt("id_origen"));
-				transferencia.setId_beneficiario(resultados.getInt("id_destino"));
+				transferencia.setId_ordenante(resultados.getInt("id_ordenante"));
+				transferencia.setId_beneficiario(resultados.getInt("id_beneficiario"));
 				transferencia.setImporte(resultados.getDouble("importe"));
 				transferencia.setConcepto(resultados.getString("concepto"));
 				transferencia.setFecha(resultados.getTimestamp("fecha"));
