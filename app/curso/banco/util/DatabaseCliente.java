@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -16,11 +15,7 @@ public class DatabaseCliente {
 	
 	//Constructor
 	public DatabaseCliente(){
-		try {
-			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "banco", "banco");
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
+		conexion = new DatabaseConexion().getConexion();
 	}
 	
 	//Metodos

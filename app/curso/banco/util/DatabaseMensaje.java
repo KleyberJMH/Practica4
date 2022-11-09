@@ -5,7 +5,6 @@ import java.sql.Timestamp;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -17,11 +16,7 @@ public class DatabaseMensaje {
 	
 	//Constructor
 	public DatabaseMensaje(){
-		try {
-			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "banco", "banco");
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
+		conexion = new DatabaseConexion().getConexion();
 	}
 	
 	//Metodos

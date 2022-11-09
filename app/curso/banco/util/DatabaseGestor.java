@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -16,11 +15,7 @@ public class DatabaseGestor {
 	
 	//Constructor
 	public DatabaseGestor(){
-		try {
-			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "banco", "banco");
-		}catch(SQLException e){
-			e.printStackTrace();
-		}
+		conexion = new DatabaseConexion().getConexion();
 	}
 	
 	//Metodos
@@ -72,8 +67,8 @@ public class DatabaseGestor {
 			String password = resultados.getString("password");
 			String correo = resultados.getString("correo");
 			
-			Gestor gestor = new Gestor(id, usuario, password, correo);
-			gestores.add(gestor);
+			Gestor result = new Gestor(id, usuario, password, correo);
+			gestores.add(result);
 		}
 		instruccion.close();
 		

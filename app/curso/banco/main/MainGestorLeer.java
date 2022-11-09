@@ -10,14 +10,26 @@ public class MainGestorLeer {
 	public static void main(String[] args) {
 		DatabaseGestor databaseGestor = new DatabaseGestor();
 		
-		System.out.println("--------------------------------------------------");
-		System.out.println("Todos los gestores");
-		System.out.println("--------------------------------------------------");
-				ArrayList<Gestor> gestores = databaseGestor.getGestores();
-				for(int i = 0 ; i<gestores.size(); i++)
-				{
-					gestores.get(i).showInfo();;
+
+		ArrayList<Gestor> gestores = null;		
+		gestores = databaseGestor.getGestores();
+				
+			if(gestores.size()> 0) {
+				System.out.println("--------------------------------------------------");
+				System.out.println("Todos los gestores");
+				System.out.println("--------------------------------------------------");
+					gestores.forEach((gestor)-> {
+						gestor.showInfo();
+					});
+				}else {
+					System.out.println("No hay gestores en la base de datos");
 				}
+				
+				
+//				for(int i = 0 ; i<gestores.size(); i++)
+//				{
+//					gestores.get(i).showInfo();
+//				}
 		
 		Scanner keyboard = new Scanner(System.in);
 		
