@@ -6,7 +6,7 @@ import app.curso.banco.entidad.Cliente;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainClienteLeer {
+public class ClienteLeerTest {
 	public static void main(String[] args){
 		DatabaseCliente databaseCliente = new DatabaseCliente();
 		

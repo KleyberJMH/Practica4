@@ -6,7 +6,7 @@ import app.curso.banco.entidad.Transferencia;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainTransferenciaLeer {
+public class TransferenciaLeerTest {
 	public static void main(String[] args) {
 		DatabaseTransferencia databaseTransferencia = new DatabaseTransferencia();
 		

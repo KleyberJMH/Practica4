@@ -3,7 +3,7 @@ package app.curso.banco.main;
 import java.util.Scanner;
 import app.curso.banco.util.DatabaseCliente;
 
-public class MainClienteEliminar {
+public class ClienteEliminarTest {
 
 	public static void main(String[] args) {
 		DatabaseCliente databaseCliente = new DatabaseCliente();

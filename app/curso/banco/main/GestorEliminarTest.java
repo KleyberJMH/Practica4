@@ -3,7 +3,7 @@ package app.curso.banco.main;
 import java.util.Scanner;
 import app.curso.banco.util.DatabaseGestor;
 
-public class MainGestorEliminar {
+public class GestorEliminarTest {
 
 	public static void main(String[] args) {
 		DatabaseGestor databaseGestor = new DatabaseGestor();

@@ -6,7 +6,7 @@ import app.curso.banco.entidad.Gestor;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainGestorLeer {
+public class GestorLeerTest {
 	public static void main(String[] args) {
 		DatabaseGestor databaseGestor = new DatabaseGestor();
 		

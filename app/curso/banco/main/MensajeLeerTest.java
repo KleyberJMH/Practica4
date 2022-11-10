@@ -6,7 +6,7 @@ import app.curso.banco.entidad.Mensaje;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainMensajeLeer {
+public class MensajeLeerTest {
 	public static void main(String[] args) {
 		DatabaseMensaje databaseMensaje = new DatabaseMensaje();
 		

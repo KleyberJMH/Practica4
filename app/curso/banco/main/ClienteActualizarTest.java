@@ -5,7 +5,7 @@ import java.util.Scanner;
 import app.curso.banco.entidad.Cliente;
 import app.curso.banco.util.DatabaseCliente;
 
-public class MainClienteActualizar {
+public class ClienteActualizarTest {
 
 	public static void main(String[] args) {
 		DatabaseCliente databaseCliente = new DatabaseCliente();

@@ -4,7 +4,7 @@ import app.curso.banco.util.DatabaseCliente;
 import app.curso.banco.entidad.Cliente;
 import java.util.Scanner;
 
-public class MainClienteCrear {
+public class ClienteCrearTest {
 	public static void main(String[] args) {
 		DatabaseCliente databaseCliente = new DatabaseCliente();
 		Scanner keyboard = new Scanner(System.in);
@@ -28,8 +28,13 @@ public class MainClienteCrear {
 		
 		
 		Cliente cliente = new Cliente(1, id_gestor, username, password, correo, saldo);
-		databaseCliente.insertarCliente(cliente);
+		boolean clienteInsertado = databaseCliente.insertarCliente(cliente);
 		
+		if(clienteInsertado) {
+			System.out.println("El cliente se inserto correctamente");
+		}else {
+			System.out.println("No se pudo insertar el cliente");
+		}
 	}
 
 }

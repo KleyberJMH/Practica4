@@ -3,7 +3,7 @@ package app.curso.banco.main;
 import java.util.Scanner;
 import app.curso.banco.util.DatabaseMensaje;
 
-public class MainMensajeEliminar {
+public class MensajeEliminarTest {
 
 	public static void main(String[] args) {
 		DatabaseMensaje databaseMensaje = new DatabaseMensaje();

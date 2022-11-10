@@ -5,7 +5,7 @@ import java.util.Scanner;
 import app.curso.banco.entidad.Transferencia;
 import app.curso.banco.util.DatabaseTransferencia;
 
-public class MainTransferenciaActualizar {
+public class TransferenciaActualizarTest {
 
 	public static void main(String[] args) {
 		DatabaseTransferencia databaseTransferencia = new DatabaseTransferencia();

@@ -6,7 +6,7 @@ import app.curso.banco.entidad.Transferencia;
 import java.sql.Timestamp;
 import java.util.Scanner;
 
-public class MainTransferenciaCrear {
+public class TransferenciaCrearTest {
 	public static void main(String[] args) {
 		DatabaseTransferencia databaseTransferencia = new DatabaseTransferencia();
 		Scanner keyboard = new Scanner(System.in);
@@ -29,7 +29,13 @@ public class MainTransferenciaCrear {
 		
 		
 		Transferencia transferencia = new Transferencia(1, id_ordenante, id_beneficiario, importe, concepto, fecha);
-		databaseTransferencia.insertarTransferencia(transferencia);
+		boolean transferenciaCreada = databaseTransferencia.insertarTransferencia(transferencia);
+		
+		if(transferenciaCreada) {
+			System.out.println("La transferencia se inserto correctamente");
+		}else {
+			System.out.println("No se pudo insertar la transferencia");
+		}
 		
 	}
 

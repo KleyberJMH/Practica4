@@ -5,7 +5,7 @@ import app.curso.banco.entidad.Mensaje;
 import java.util.Scanner;
 import java.sql.Timestamp;
 
-public class MainMensajeCrear {
+public class MensajeCrearTest {
 	public static void main(String[] args) {
 		DatabaseMensaje databaseMensaje = new DatabaseMensaje();
 		Scanner keyboard = new Scanner(System.in);
@@ -25,7 +25,15 @@ public class MainMensajeCrear {
 		
 		
 		Mensaje mensaje = new Mensaje(1, id_origen, id_destino, texto, fecha);
-		databaseMensaje.insertarMensaje(mensaje);
+		
+		
+		boolean mensajeInsertado = databaseMensaje.insertarMensaje(mensaje);
+		
+		if(mensajeInsertado) {
+			System.out.println("El mensaje se inserto correctamente");
+		}else {
+			System.out.println("No se pudo insertar el mensaje");
+		}
 		
 	}
 

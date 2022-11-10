@@ -5,7 +5,7 @@ import java.util.Scanner;
 import app.curso.banco.entidad.Mensaje;
 import app.curso.banco.util.DatabaseMensaje;
 
-public class MainMensajeActualizar {
+public class MensajeActualizarTest {
 
 	public static void main(String[] args) {
 		DatabaseMensaje databaseMensaje = new DatabaseMensaje();

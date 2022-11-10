@@ -5,7 +5,7 @@ import java.util.Scanner;
 import app.curso.banco.entidad.Gestor;
 import app.curso.banco.util.DatabaseGestor;
 
-public class MainGestorActualizar {
+public class GestorActualizarTest {
 
 	public static void main(String[] args) {
 		DatabaseGestor databaseGestor = new DatabaseGestor();

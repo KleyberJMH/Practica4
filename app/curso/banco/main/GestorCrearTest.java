@@ -4,7 +4,7 @@ import app.curso.banco.util.DatabaseGestor;
 import app.curso.banco.entidad.Gestor;
 import java.util.Scanner;
 
-public class MainGestorCrear {
+public class GestorCrearTest {
 	public static void main(String[] args) {
 		DatabaseGestor databaseGestor = new DatabaseGestor();
 		Scanner keyboard = new Scanner(System.in);
@@ -22,8 +22,13 @@ public class MainGestorCrear {
 		
 		
 		Gestor gestor = new Gestor(1, username, password, correo);
-		databaseGestor.insertarGestor(gestor);
+		boolean gestorCreado = databaseGestor.insertarGestor(gestor);
 		
+		if(gestorCreado) {
+			System.out.println("El gestor se inserto correctamente");
+		}else {
+			System.out.println("No se pudo insertar el gestor");
+		}
 	}
 
 }

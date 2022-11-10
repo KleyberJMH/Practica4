@@ -3,7 +3,7 @@ package app.curso.banco.main;
 import java.util.Scanner;
 import app.curso.banco.util.DatabaseTransferencia;
 
-public class MainTransferenciaEliminar {
+public class TransferenciaEliminarTest {
 
 	public static void main(String[] args) {
 		DatabaseTransferencia databaseTransferencia = new DatabaseTransferencia();
