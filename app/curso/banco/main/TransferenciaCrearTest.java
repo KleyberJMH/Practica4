@@ -21,7 +21,8 @@ public class TransferenciaCrearTest {
 		Double importe = keyboard.nextDouble();
 		
 		System.out.print("Ingrese el concepto: ");
-		String concepto = keyboard.next();
+		keyboard.nextLine();
+		String concepto = keyboard.nextLine();
 		
 		Timestamp fecha = new Timestamp(System.currentTimeMillis());
 		

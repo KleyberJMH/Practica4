@@ -23,7 +23,8 @@ public class TransferenciaActualizarTest {
 		if(transferencia!=null) {
 			System.out.println("Nota: En caso de no querer cambiar el campo ingrese 0");
 			System.out.print("Ingrese nuevo concepto: ");
-			String concepto = keyboard.next();
+			keyboard.nextLine();
+			String concepto = keyboard.nextLine();
 			
 			if(!concepto.equals("0")) {
 				transferencia.setConcepto(concepto);

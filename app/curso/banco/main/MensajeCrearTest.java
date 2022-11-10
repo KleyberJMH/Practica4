@@ -17,7 +17,8 @@ public class MensajeCrearTest {
 		int id_destino = keyboard.nextInt();
 		
 		System.out.print("Ingrese el texto: ");
-		String texto = keyboard.next();
+		keyboard.nextLine();
+		String texto = keyboard.nextLine();
 		
 		Timestamp fecha = new Timestamp(System.currentTimeMillis());
 		

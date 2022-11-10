@@ -23,7 +23,8 @@ public class MensajeActualizarTest {
 		if(mensaje!=null) {
 			System.out.println("Nota: En caso de no querer cambiar el campo ingrese 0");
 			System.out.print("Ingrese nuevo texto: ");
-			String texto = keyboard.next();
+			keyboard.nextLine();
+			String texto = keyboard.nextLine();
 			
 			if(!texto.equals("0")) {
 				mensaje.setTexto(texto);
